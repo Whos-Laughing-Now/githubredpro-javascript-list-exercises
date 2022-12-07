@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>File Coding</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="container__makddown">
+            <h1 id="description" style="color: #0d6efd;" "id=" modilo-js02">Curso JavaScript tutorizado | Modulo JS12 |
+                CC Example</h1>
+            <div class="header">
+                <h2 id="description">Capitulo 12 - Condicionales IF II</h2>
+
+                <p class="logo"></p>
+            </div>
+            <div class="contenido">
+                <div class="principal">
+                    <h1></h1>
+                    <br />
+                    <div id="info">
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <span>
+                    <button><a class="btn-index" href="index.html">File coding</a></button>
+                </span>
+                <span>
+                    <button><a class="btn-makdown" href="makdown.html">Readme Makdown</a></button>
+                </span>
+
+            </div>
+            <!-- ----------------------------------------------------------------------- -->
+
+            <div class="container__heading2">
+                <div class="heeding">
+                </div>
+            </div>
+            <!-- ----------------------------------------------------------------------- -->
+
+            <div class="respuesta">
+                <p>
+                    <strong>Note :</strong> Continuamos viendo el condicional IF. En este vídeo vemos cómo utilizar ventanas de tipo prompt,
+                    vemos
+                    cómo y cuando pueden ser necesarios los IF anidados y el uso de operadores lógicos..
+                </p>
+                <div id="title">
+                    <!-- Title -->
+                </div>
+
+                <div id="subtitulo">
+                    <!-- Subtitle -->
+                </div>
+                <h3> { 💻 Run RESULTADO } </h3>
+                <div id="edad">
+                    <!-- Pintar datos -->
+                </div>
+                <div id="message">
+                    <!-- Pintar datos -->
+                </div>
+
+                <div class="container__pre">
+
+                    <h3> {💻 CODIGO ClASE }</h3>
+                    <pre>
+
+    // Estas lineas de codigo son opcinal
+    // let nombre = prompt("Introduce tu nombre")
+    let edad = prompt("!Hola " + nombre + " Introduce tu edad edad tienes");
+                
+                
+    let edad = prompt("!Hola Introduce tu edad edad tienes");
+                
+    if( edad >= 21)
+    {                  
+        let nodoEdad = document.querySelector('#edad');
+        nodoEdad.innerHTML = nodoEdad.innerHTML + "Tu edad es de : " + edad + ", anos eres mayor de edad, Puedes sacarte el carnet de conducir";
+    }
+    else
+    {          
+        let nodoEdad = document.querySelector('#edad');
+        nodoEdad.innerHTML = nodoEdad.innerHTML + "Tu edad es de : " + edad + ", anos eres menor de edad, NO sacarte el carnet de conducir";
+                
+        nodoEdad.innerHTML = nodoEdad.innerHTML + "Acabamos de evaluat la edad del para saber si puedes tener el carnet de conducir";
+        et edadCadidato = 18 - edad;
+        nodoEdad.innerHTML = nodoEdad.innerHTML + "Vuelve dentro de  : " + edadCadidato + ", anos eres menor de edad, NO puedes sacarte el carnet de conducir";
+    }   
+
+</pre>
+                </div><!-- fin de container pre -->
+                <!-- ----------------------------------------------------------------------- -->
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

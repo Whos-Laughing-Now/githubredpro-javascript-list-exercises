@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+ 
+    <title>File Makdown</title>
+</head>
+<body>
+
+    <div class="wrapper">   
+
+        <div class="container__makddown"> 
+            <h1 id="description" style="color: #0d6efd;" "id="modilo-js02">Curso JavaScript tutorizado | Modulo JS12 | CC Example</h1>
+
+            <div class="header">              
+                <p class="logo"></p>
+            </div>
+            <div class="contenido">
+                <div class="principal">
+                    <h1></h1>
+                    <br />
+                    <div id="info">
+                    </div>
+                </div>
+              
+            </div>
+            <div>
+                <span>
+                    <button><a href="index.html">File code</a></button>
+                </span>
+                <span>
+                    <button><a class="btn-makdown" href="makdown.html">Readme Makdown</a></button>
+                </span>
+    
+            </div>
+
+<h2 id="description">Capitulo 12 - Condicionales IF II</h2>
+<h2>Description</h2>
+<p>This application provides a list of items within a variety of categories as well as provide a user registration and authentication system. Registered users will have the ability to post, edit and delete their own items..</p>
+<h2>Files</h2>
+<ul>
+<li>
+<code>static</code>: All assets for CSS (Bootstrap) and JavaScript (jQuery and AlertifyJS).</li>
+<li>
+<code>templates</code>: Templates for HTML content. It contains modals for creating, editing and viewing items catalog.</li>
+<li>
+<code>project.py</code>: main Python script for running the web application.</li>
+<li>
+<code>client_secrets.json</code>: Contains <code>client_id</code> and <code>client_secret</code> values from Google Web App.</li>
+<li>
+<code>database_setup.py</code>: Setup database mapping creation.</li>
+<li>
+<code>google_auth.py</code>: Google Authentication configuration (credits <a href="https://github.com/Justin-Tadlock/auth-playground">Justin-Tadlock</a>).</li>
+<li>
+<code>populate.py</code>: Populates the item catalog database (SQLite).</li>
+<li>
+<code>secret_key.txt</code>: Secret key for token generation.</li>
+<li>
+<code>readme.md = self</code>
+</li>
+</ul>
+<h2>Main features</h2>
+<p>The application meets the following requirements to create the user functionality:</p>
+<ul>
+<li>
+<code>JSON endpoint</code> that serves the same information as displayed in the <code>HTML endpoints</code> for an arbitrary item in the catalog.</li>
+<li>Website reads category and item information from a database.</li>
+<li>Website includes a form allowing users to add new items and correctly processes submitted forms.</li>
+<li>Website includes a form to edit/update a current record in the database table and correctly processes submitted forms.</li>
+<li>Website includes a function to delete a current record.</li>
+<li>Create, delete and update operations do consider authorization status prior to execution.</li>
+<li>Implements Google Accounts for authentication and authorization.</li>
+<li>Login and logout buttons.</li>
+</ul>
+<h2>Style guide</h2>
+<p>Python files (<code>database_setup.py</code>, <code>google_auth.py</code>, <code>populate.py</code>) meets PEP 8 style guide.</p>
+<h2>Setup and execution</h2>
+<h3>Virtual machine</h3>
+<p>Follow this link (Udacity's repo) to get running a virtual machine for development: <a href="https://github.com/udacity/fullstack-nanodegree-vm">here</a></p>
+<p>This virtual machine contains all of the basic elements to start working a database (PostgreSQL), Python programming language and libraries (SQLAlchemy, Bleach, etc.)</p>
+<h3>Database</h3>
+<p>The following steps are required to get a SQLite database created and populated.</p>
+<ol>
+<li>Run <code>python database_setup.py</code> to create the database schema. This will generate a SQLite file named <code>itemcatalog.db</code>.</li>
+<li>Run <code>python populate_setup.py</code> to populate the database.</li>
+</ol>
+<h3>Depedencies</h3>
+<p>This project depends on the following <strong>additional</strong> Python modules installation:</p>
+<ul>
+<li>
+<code>$ sudo pip install google-auth</code>
+</li>
+<li>
+<code>$ sudo pip install flask-cors</code>
+</li>
+</ul>
+<p><strong>Note</strong>: Other modules (Flask, SQLAlchemy, etc) has been installed previously on the virtual machine.</p>
+<h3>Execution</h3>
+<p>Type following command to execute the application:</p>
+<ul>
+<li>
+<code>$python project.py</code>: will run the application on <code>localhost:5000</code>.</li>
+</ul>
+<h3>Instructional/Demonstration Video</h3>
+<p><a href="https://youtu.be/hZAvGsjxX_Q">https://youtu.be/hZAvGsjxX_Q</a></p>
+<h3>Issues</h3>
+<p>The virtual machine must have time sync with the server. If you experiment issues while login with the Google Account, please sync the time of the virtual machine with this command (a date/time example is given, do it accordingly with the current date/time):</p>
+<p><code>$ sudo date --set=&quot;2019-08-28 05:41:53.000&quot;</code></p>
+<h1>Chuleta de JS</h1>
+<h2>Eventos</h2>
+<h3>Atributo de HTML</h3>
+<pre><code class="language-html">&lt;button onclick=&quot;eventoPersonalizado()&quot; &gt;&lt;/button&gt;
+</code></pre>
+<pre><code class="language-js">function eventoPersonalizado(){
+    console.log( 'Evento!!' )
+}
+</code></pre>
+<h2>Seleccionar elmentos del DOM</h2>
+<h3>Seleccionar un sólo elemento</h3>
+<p>Query selector devuelve SIEMPRE un sólo elemento HTML; el primero que cumple el selector</p>
+<pre><code class="language-js">let nodoHTML = document.querySelector( 'selector de CSS' )
+</code></pre>
+<pre><code class="language-html">&lt;div id=&quot;principal&quot;&gt;
+</code></pre>
+<pre><code class="language-js">let nodoPrincipal = document.querySelector( '#principal' )
+</code></pre>
+<h3>Seleccionar un GRUPO de elementos</h3>
+<p>querySelectorALL SIEMPRE devuelve una LISTA de nodos HTML</p>
+<pre><code class="language-js"> // LISTA de NODOS HTML
+    let listaCuadrados = document.querySelectorAll( '#grid .cuadrado' );
+    console.log( listaCuadrados );
+
+    for( let i = 0; i &lt; listaCuadrados.length; i++ ){
+
+        listaCuadrados[i].style.backgroundColor = 'lightgreen';
+    }
+</code></pre>
+<h2>Añadir Clases</h2>
+<p>Para añadir una clase necesito seleccionar primero el elemento del documento HTML ( DOM )</p>
+<pre><code class="language-html">&lt;div id=&quot;miCuadrado&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-js">let nodoMiCuadrado = document.querySelector('#miCuadrado');
+// Añadir al elemento una clase
+nodoMiCuadrado.classList.add( 'animationAppear' );
+
+</code></pre>
+<h2>Cambiar el estilo de un elemento</h2>
+<pre><code class="language-js">let nodoPrincipal =  document.querySelector( &quot;#principal&quot; );
+nodoPrincipal.style.color = &quot;red&quot;;
+</code></pre>
+<h2>Pintar en un elemento Web (del DOM)</h2>
+<h3>innerHTML</h3>
+<p>NOTA: El contenido que introduzca TIENE QUE ESTAR COMPLETO. Es decir, que no puedo introducir una etiqueta de inicio SIN CIERRE</p>
+<pre><code class="language-html">&lt;div id=&quot;datos&quot; &gt;&lt;/div&gt;
+</code></pre>
+<p>En este punto estoy asignando el nuevo valor PERO NO TENGO EN CUENTA LO QUE HABÍA ANTES</p>
+<pre><code class="language-js"> let nodoDatos = document.querySelector( '#datos' );
+nodoDatos.innerHTML = '&lt;p&gt; Hola contenido creado por JS &lt;/p&gt;';
+</code></pre>
+<pre><code class="language-js"> let nodoDatos = document.querySelector( '#datos' );
+nodoDatos.innerHTML = nodoDatos.innerHTML + '&lt;p&gt; Hola contenido creado por JS &lt;/p&gt;';
+</code></pre>
+<p>RECOMENDACIÓN</p>
+<p>Usar una variable STRING que represente el contenido HTML antes de introducirlo en innerHTML</p>
+<pre><code class="language-js">
+let strHTML = &quot;&lt;h1&gt;HolaMundo&lt;/h1&gt;&quot;;
+
+nodoDatos.innerHTML = strHTML
+
+</code></pre>
+<p>NOTA: TEMPLATE STRING</p>
+<p>Es el caracter ` y me permite crear STRINGs literales.Por ejemplo dar espacios y ENTER . Se usa el ${ } para escribir el valor de una variable de JS</p>
+<pre><code class="language-js">let nombre = 'Curso de JS';
+nodoDatos.innerHTML = ` 
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;h3&gt; ${ nombre }  &lt;/h3&gt;
+        &lt;div&gt;
+            &lt;p class=&quot;parrafo&quot;&gt; Texto &lt;/p&gt;
+            &lt;p class=&quot;parrafo&quot;&gt; Texto &lt;/p&gt;
+            &lt;p class=&quot;parrafo&quot;&gt; Texto &lt;/p&gt;
+            &lt;p class=&quot;parrafo&quot;&gt; Texto &lt;/p&gt;
+            &lt;p class=&quot;parrafo&quot;&gt; Texto &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt; `;
+
+</code></pre>
+<pre><code class="language-js">
+let lista_nombres = [ 'Ana' ,'Carlos','Pepe', 'María' ,'Alba' ];
+let lista_emojis = [ '😅' ,'🤣','😊', '😇' ,'🥰' ];
+
+// Pintar en #nombres todos los elemenos de la lista nombres
+
+let nodoNombres = document.querySelector( '#nombres' );
+
+console.log( nodoNombres );
+let strHTML = &quot;&quot;;
+
+for( let i = 0; i &lt; lista_nombres.length ; i++ ){
+    console.log( lista_nombres[ i ] );
+    //OPCION 1
+    // strHTML = strHTML + '&lt;div class=&quot;border&quot; &gt;'+ lista_nombres[i] +'&lt;span&gt;'+ lista_emojis[i] +'&lt;/span&gt; &lt;/div&gt;';
+    // OPCIÓN 2: Template String
+    strHTML = strHTML + `
+        &lt;div class='border'&gt; 
+            ${lista_nombres[i]}
+            &lt;span&gt;  ${ lista_emojis[i] } &lt;/span&gt;
+        &lt;/div&gt;
+    `
+}
+</code></pre>
+<h2>Acceder al valor de un input</h2>
+<pre><code class="language-html">&lt;input id=&quot;entradaNombre&quot;&gt;
+</code></pre>
+<pre><code class="language-js">let nodoInput = document.querySelector( '#entradaNombre' );
+let nombre = nodoInput.value;
+</code></pre>
+<h2>Funciones</h2>
+<p>Un trozo de código que tiene un nombre. Se puede ejecutar en cualquier momento que se requiera.</p>
+<p>Los cometidos de las funciones son:</p>
+<ul>
+<li>Reusar código</li>
+<li>Crear código general</li>
+<li>Aislar la funcionalidad</li>
+</ul>
+<p>El return es una palabra reservada que transforma la ejeución de la función en la variable del return</p>
+<pre><code class="language-js">
+function saluda ( nombre, sexo ){
+    let edad = 90;
+    // texto es una VARIABLE LOCAL
+    let texto = &quot;¡Hola&quot;;
+
+    if( sexo === 'M' ){ // Mujer
+        texto = texto + ' amiga ';
+    }else if(sexo === 'H' ){ // Hombre
+        texto = texto + ' amigo ';
+    }
+
+    texto = texto +  nombre +&quot;!&quot;;
+
+    return texto;
+}
+
+let saludoMarta = saluda( 'Marta' , 'M' );
+
+</code></pre>
+<h2>Búcle FOR</h2>
+<p>Un trozo de código QUE SE REPITE UN NÚMERO DE VECES DETERMINADO</p>
+<pre><code class="language-js">// FOR -&gt; Búcles
+// inicialización; condición ; actualización
+for( let i = 0;       i &lt; 10;        i++  ){// i = i + 1
+
+    console.log( 'Hola Mundo FOR' );
+    console.log( i );
+
+}// ACTUALIZACIÓN -&gt; i++
+
+
+for ( let i=0; i&lt;100; i++ ){
+
+    console.log( i )    
+
+}
+
+
+let listafrutas = [ 'Pera', 'Manzana', 'Fresa' , 'Melocotón', 'Tomate'  ];
+// PODEMOS USAR LA HERRAMIENTA DEL FOR PARA RECORRER EL ARRAY
+
+for( let i = 0; i &lt; listafrutas.length ; i++ ){
+
+    console.log( i )
+    // console.log( listafrutas[ 0 ] )
+    console.log( listafrutas[ i ] )
+}
+
+console.log( listafrutas )
+
+
+
+</code></pre>
+
+<script src="index.js"></script>
+</div>
+</div>
+</body>
+</html>
